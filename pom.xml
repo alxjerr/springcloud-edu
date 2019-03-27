@@ -42,5 +42,6 @@
 
     <modules>
         <module>springcloud-2.0-eureka-server</module>
+        <module>springboot-2.0-member</module>
     </modules>
 </project>
