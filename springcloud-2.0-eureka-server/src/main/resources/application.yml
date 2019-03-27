@@ -4,7 +4,7 @@ server:
 ##定义服务名称
 spring:
   application:
-    name: app-itmayiedu-eureka
+    name: app-eureka
 eureka:
   instance:
     ###注册中心ip地址

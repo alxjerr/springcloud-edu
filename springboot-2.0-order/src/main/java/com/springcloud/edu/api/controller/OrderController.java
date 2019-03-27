@@ -14,7 +14,8 @@ public class OrderController {
 
     @RequestMapping("/getOrder")
     public String getOrder() {
-        String result = restTemplate.getForObject("http://127.0.0.1:8000/getMember", String.class);
+        String url = "http://app-member/getMember"; //使用别名去注册中心获取对应的服务
+        String result = restTemplate.getForObject(url, String.class);
         System.out.println("订单服务调用会员服务result: " + result);
         return result;
     }
