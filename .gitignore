@@ -1,0 +1,58 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.class
+*.iml
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+.settings/
+.classpath
+.project
+
+# logs and trace
+*.log
+*.trace
+*.dat
+
+logs/
+
+# Backup Files
+*.bak
+*.old
+
+# Output Directory
+bin/
+target/
+tmp/
+
+# mac
+*.DS_Store
+
+# Debug files
+*.dSYM/
+
+# Java Package Files
+*.jar
+*.war
+*.ear
