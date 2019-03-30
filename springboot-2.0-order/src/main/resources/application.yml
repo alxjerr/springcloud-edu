@@ -9,3 +9,13 @@ eureka:
       defaultZone: http://localhost:8100/eureka
     register-with-eureka: true
     fetch-registry: true
+
+  # 心跳检测与续约时间
+  # 测试时将值设置的小一些，保证服务关闭后注册中心能及时剔除服务
+  instance:
+    # eureka客户端向服务端发送心跳的时间间隔，单位为秒
+    lease-renewal-interval-in-seconds: 1
+    # Eureka服务端在收到最优一次心跳之后等待的时间上限，单位秒，超过则剔除（客户端告诉服务端按照此规则）
+    lease-expiration-duration-in-seconds: 2
+
+

@@ -42,6 +42,7 @@
 
     <modules>
         <module>springcloud-2.0-eureka-server</module>
+        <module>springcloud-2.0-eureka-9100</module>
         <module>springboot-2.0-member</module>
         <module>springboot-2.0-order</module>
     </modules>
