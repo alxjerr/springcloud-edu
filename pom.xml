@@ -45,5 +45,6 @@
         <module>springcloud-2.0-eureka-9100</module>
         <module>springboot-2.0-member</module>
         <module>springboot-2.0-order</module>
+        <module>springcloud-2.0-zuul-gateway</module>
     </modules>
 </project>
