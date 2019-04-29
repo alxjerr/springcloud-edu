@@ -46,5 +46,7 @@
         <module>springboot-2.0-member</module>
         <module>springboot-2.0-order</module>
         <module>springcloud-2.0-zuul-gateway</module>
+        <module>springcloud-config-server</module>
+        <module>springcloud-config-client</module>
     </modules>
 </project>

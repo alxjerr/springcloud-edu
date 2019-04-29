@@ -4,6 +4,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Component
 public class TokenFilter extends ZuulFilter {
+
+    @Value("${server.port}")
+    private String serverPort;
 
     //表示过滤器类型，表示在请求之前执行
     @Override
@@ -53,6 +57,7 @@ public class TokenFilter extends ZuulFilter {
 
         }
         // 正常调用其他服务接口
+        System.out.println("网关服务器端口号：" + serverPort);
         return null;
     }
 

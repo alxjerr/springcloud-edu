@@ -3,24 +3,37 @@ server:
 spring:
   application:
     name: service-zuul
+  cloud:
+    config:
+      ####读取后缀
+      profile: dev
+      ####读取config-server注册地址
+      discovery:
+        service-id: config-server
+        enabled: true
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka/
 
-#### 配置网关反向代理
-zuul:
-  routes:
-    api-a:
-      ### 以 /api-member/访问转发到会员服务
-      path: /api-member/**
-      serviceId: app-member
-    api-b:
-      ### 以 /api-order/访问转发到订单服务
-      path: /api-order/**
-      serviceId: app-order
+##### 配置网关反向代理
+#zuul:
+#  routes:
+#    api-a:
+#      ### 以 /api-member/访问转发到会员服务
+#      path: /api-member/**
+#      serviceId: app-member
+#    api-b:
+#      ### 以 /api-order/访问转发到订单服务
+#      path: /api-order/**
+#      serviceId: app-order
 
 # zuul网关默认整合ribbon，自动实现负载均衡轮询效果
 
-
+## 开启所有的监控中心接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
