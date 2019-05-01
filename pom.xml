@@ -48,5 +48,6 @@
         <module>springcloud-2.0-zuul-gateway</module>
         <module>springcloud-config-server</module>
         <module>springcloud-config-client</module>
+        <module>springbot-swagger</module>
     </modules>
 </project>
